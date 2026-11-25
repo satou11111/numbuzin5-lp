@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ナンバーズイン(numbuzin) 5番 白玉グルタチオンC美容液｜透明感のあるツヤ白玉肌へ</title>
+  <!-- Google Fonts: Zen Maru Gothic & Noto Sans JP & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Plus+Jakarta+Sans:wght@600;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastel: {
+              cream: '#FFFDF2',
+              light: '#FFF9DB',
+              base: '#FFF3BF',
+              warm: '#FFEC99',
+              gold: '#FCC419',
+            },
+            brand: {
+              dark: '#222222',
+              charcoal: '#333333',
+              lavender: '#B8B5E1',
+              sky: '#99C2EC',
+            },
+            amazon: {
+              yellow: '#FFD814',
+              yellowHover: '#F7CA00',
+              orange: '#FF9900',
+              orangeDark: '#E47911',
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            maru: ['"Zen Maru Gothic"', '"Noto Sans JP"', 'sans-serif'],
+            en: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'pearl': '0 10px 35px -5px rgba(250, 210, 80, 0.28), 0 4px 12px -2px rgba(34, 34, 34, 0.04)',
+            'soft': '0 8px 30px rgba(0, 0, 0, 0.04)',
+            'amazon': '0 6px 20px rgba(255, 153, 0, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* カスタムスタイル：白玉のようなツヤ感・アニメーション・背景装飾 */
+    body {
+      background-color: #FFFDF2;
+      color: #222222;
+      font-family: 'Noto Sans JP', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* パステルイエロー×白玉パールのラジアル背景 */
+    .hero-gradient {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 45%),
+        radial-gradient(circle at 85% 30%, rgba(184, 181, 225, 0.22) 0%, rgba(184, 181, 225, 0) 40%),
+        radial-gradient(circle at 50% 80%, rgba(255, 236, 153, 0.65) 0%, rgba(255, 249, 219, 0) 60%),
+        linear-gradient(180deg, #FFF9DB 0%, #FFF3BF 55%, #FFFDF2 100%);
+    }
+
+    /* 白玉ツヤオーブ（光の玉） */
+    .shiratama-orb {
+      background: radial-gradient(circle at 30% 30%, #FFFFFF 0%, #FFFDF5 45%, #FFF3BF 85%, rgba(255, 236, 153, 0.4) 100%);
+      box-shadow:
+        inset -8px -8px 20px rgba(245, 200, 70, 0.22),
+        inset 8px 8px 18px rgba(255, 255, 255, 0.95),
+        0 15px 35px rgba(235, 190, 60, 0.2);
+    }
+
+    /* ラベンダーブルー・パッケージタグ風グラデーション */
+    .glutathione-tag {
+      background: linear-gradient(180deg, #B9B4E4 0%, #98C3EE 100%);
+    }
+
+    /* Amazon CTAボタンの立体感＆シャインアニメーション */
+    .btn-amazon {
+      background: linear-gradient(180deg, #FFE033 0%, #FFD814 55%, #F5B800 100%);
+      border: 1px solid #E5A800;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease, filter 0.2s ease;
+    }
+    .btn-amazon:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(255, 153, 0, 0.45);
+      filter: brightness(1.03);
+    }
+    .btn-amazon:active {
+      transform: translateY(1px);
+    }
+    .btn-amazon::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.65) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(25deg);
+      animation: shineSweep 3.8s infinite ease-in-out;
+    }
+
+    @keyframes shineSweep {
+      0%, 55% { left: -60%; }
+      85%, 100% { left: 140%; }
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+    .animate-float {
+      animation: floatSlow 4.5s ease-in-out infinite;
+    }
+
+    /* スクロールフェードインアニメーション */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* マーカー風アンダーライン */
+    .marker-yellow {
+      background: linear-gradient(transparent 55%, #FFE066 55%);
+      padding: 0 4px;
+      border-radius: 3px;
+    }
+    .marker-cream {
+      background: linear-gradient(transparent 55%, #FFF3BF 55%);
+      padding: 0 4px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-pastel-warm selection:text-brand-dark pb-24 sm:pb-20">
+
+  <!-- ==================== 1. 商品紹介（ファーストビュー） ==================== -->
+  <header class="hero-gradient relative overflow-hidden pt-5 pb-14 md:pt-8 md:pb-20 border-b border-pastel-warm/70">
+    <!-- 背景の装飾白玉オーブ -->
+    <div class="shiratama-orb w-32 h-32 md:w-48 md:h-48 rounded-full absolute -top-10 -left-10 opacity-75 pointer-events-none"></div>
+    <div class="shiratama-orb w-20 h-20 md:w-28 md:h-28 rounded-full absolute top-36 right-4 md:right-16 opacity-80 pointer-events-none animate-float"></div>
+    <div class="shiratama-orb w-14 h-14 rounded-full absolute bottom-12 left-6 md:left-24 opacity-70 pointer-events-none"></div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
+      <!-- トップブランドバー -->
+      <div class="flex items-center justify-between bg-white/85 backdrop-blur-md px-4 py-2.5 rounded-full shadow-soft border border-pastel-warm/80 mb-7">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-dark text-white font-en font-extrabold text-xs tracking-tighter">5+</span>
+          <span class="font-en font-bold tracking-wider text-sm sm:text-base text-brand-dark">numbuz:n</span>
+          <span class="hidden sm:inline-block text-xs text-gray-500 border-l border-gray-300 pl-2">ナンバーズイン 公式ラインナップ</span>
+        </div>
+        <a href="https://www.amazon.co.jp/s?k=%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BA%E3%82%A4%E3%83%B3+5%E7%95%AA+%E7%99%BD%E7%8E%89%E3%82%B0%E3%83%AB%E3%82%BF%E3%83%81%E3%82%AA%E3%83%B3C%E7%BE%8E%E5%AE%B9%E6%B6%B2"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="text-xs sm:text-sm font-bold bg-brand-dark text-pastel-base hover:bg-neutral-800 px-3.5 py-1.5 rounded-full transition flex items-center gap-1">
+          <span>Amazonで見る</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- バッジ群 -->
+      <div class="flex flex-wrap items-center justify-center gap-2 mb-4">
+        <span class="inline-flex items-center gap-1.5 bg-white/95 text-brand-dark border border-pastel-gold/60 text-xs sm:text-sm font-bold px-3.5 py-1 rounded-full shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-pastel-gold"></span>
+          白玉グルタチオンC<sup class="text-[10px] ml-0.5">*1</sup> 集中美容液
+        </span>
+        <span class="inline-flex items-center gap-1 bg-brand-dark text-white text-xs sm:text-sm font-bold px-3.5 py-1 rounded-full shadow-sm">
+          No.5 Vitamin'3 Concentrated Serum
+        </span>
+      </div>
+
+      <!-- メインキャッチコピー -->
+      <div class="text-center mb-6">
+        <h1 class="font-maru font-black text-2xl sm:text-4xl md:text-[42px] leading-[1.35] tracking-tight text-brand-dark mb-3">
+          高濃縮グルタチオンC<sup class="text-sm sm:text-lg font-bold">*1</sup>と<br class="sm:hidden" />ナイアシンアミドで、<br />
+          <span class="marker-yellow">透明感<sup class="text-sm sm:text-lg font-bold">*2</sup>のあるツヤ白玉肌</span>へ
+        </h1>
+        <p class="text-sm sm:text-base font-bold text-neutral-700 bg-white/75 inline-block px-4 py-1.5 rounded-2xl border border-white">
+          ナンバーズイン(numbuzin) 5番 白玉グルタチオンC美容液（30ml）
+        </p>
+      </div>
+
+      <!-- 商品ボトルビジュアル＋ポイントカード -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center bg-white/85 backdrop-blur-md rounded-3xl p-6 sm:p-8 shadow-pearl border border-white">
+        <!-- ボトル画像エリア（numbersin5.jpg + 高精細SVGフォールバック） -->
+        <div class="md:col-span-5 flex flex-col items-center justify-center relative">
+          <div class="relative w-52 h-64 sm:w-56 sm:h-72 flex items-center justify-center">
+            <!-- 後ろの光の輪 -->
+            <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-pastel-base via-white to-brand-lavender/30 blur-md"></div>
+
+            <!-- 実際のアップロード商品画像（読み込み失敗時はSVGへ自動切替） -->
+            <img
+              id="hero-product-img"
+              src="numbersin5.jpg"
+              alt="ナンバーズイン(numbuzin) 5番 白玉グルタチオンC美容液 30ml"
+              class="relative z-10 max-h-64 sm:max-h-72 w-auto object-contain drop-shadow-xl animate-float rounded-2xl"
+              onerror="this.style.display='none'; document.getElementById('hero-product-svg').classList.remove('hidden');"
+            />
+
+            <!-- numbersin5.jpg が見つからない場合の精密SVGボトルイラスト -->
+            <div id="hero-product-svg" class="hidden relative z-10 w-44 h-64 sm:w-48 sm:h-72 animate-float">
+              <svg viewBox="0 0 220 340" class="w-full h-full drop-shadow-xl" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bottleGlass" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#141110"/>
+                    <stop offset="25%" stop-color="#2D2622"/>
+                    <stop offset="55%" stop-color="#1A1615"/>
+                    <stop offset="85%" stop-color="#382F2A"/>
+                    <stop offset="100%" stop-color="#120F0E"/>
+                  </linearGradient>
+                  <linearGradient id="glutathioneTab" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#B9B4E4"/>
+                    <stop offset="100%" stop-color="#96C3EE"/>
+                  </linearGradient>
+                  <linearGradient id="capGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#181818"/>
+                    <stop offset="35%" stop-color="#363636"/>
+                    <stop offset="100%" stop-color="#141414"/>
+                  </linearGradient>
+                </defs>
+                <!-- スポイトゴム部分 -->
+                <path d="M93 26 C93 12, 127 12, 127 26 L129 66 L91 66 Z" fill="url(#capGrad)"/>
+                <!-- キャップギザギザ部分 -->
+                <rect x="81" y="64" width="58" height="36" rx="4" fill="url(#capGrad)"/>
+                <g stroke="#444" stroke-width="1.2" opacity="0.7">
+                  <line x1="86" y1="66" x2="86" y2="98"/><line x1="91" y1="66" x2="91" y2="98"/>
+                  <line x1="96" y1="66" x2="96" y2="98"/><line x1="101" y1="66" x2="101" y2="98"/>
+                  <line x1="106" y1="66" x2="106" y2="98"/><line x1="111" y1="66" x2="111" y2="98"/>
+                  <line x1="116" y1="66" x2="116" y2="98"/><line x1="121" y1="66" x2="121" y2="98"/>
+                  <line x1="126" y1="66" x2="126" y2="98"/><line x1="131" y1="66" x2="131" y2="98"/>
+                </g>
+                <!-- ボトルネック -->
+                <rect x="92" y="100" width="36" height="16" fill="url(#bottleGlass)"/>
+                <!-- ボトル本体（遮光ブラウンブラック） -->
+                <path d="M92 116 C72 122, 64 136, 64 156 L64 304 C64 316, 72 322, 110 322 C148 322, 156 316, 156 304 L156 156 C156 136, 148 122, 128 116 Z" fill="url(#bottleGlass)"/>
+                <!-- ガラスハイライト -->
+                <ellipse cx="83" cy="142" rx="6" ry="12" fill="#FFFFFF" opacity="0.22" transform="rotate(20 83 142)"/>
+                <ellipse cx="137" cy="142" rx="5" ry="10" fill="#FFFFFF" opacity="0.16" transform="rotate(-20 137 142)"/>
+                <!-- 右端のGlutathioneラベンダータグ -->
+                <rect x="155" y="166" width="18" height="68" rx="3" fill="url(#glutathioneTab)"/>
+                <text x="164" y="200" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#1F2937" text-anchor="middle" transform="rotate(90 164 200)">Glutathione</text>
+                <!-- 白いラベル -->
+                <rect x="64" y="166" width="92" height="134" fill="#FFFFFF"/>
+                <!-- ラベル内「5+」 -->
+                <text x="76" y="226" font-family="Plus Jakarta Sans, sans-serif" font-size="52" font-weight="700" fill="#181818">5</text>
+                <text x="103" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="700" fill="#181818">+</text>
+                <!-- 縦書き numbuz:n -->
+                <text x="80" y="272" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="700" fill="#222222" transform="rotate(-90 80 272)">numbuz:n</text>
+                <!-- 縦書き Vitamin'3 Concentrated Serum -->
+                <text x="128" y="246" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="600" fill="#8C89B8" transform="rotate(-90 128 246)">Vitamin'3</text>
+                <text x="137" y="246" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="600" fill="#8C89B8" transform="rotate(-90 137 246)">Concentrated Serum</text>
+                <line x1="143" y1="204" x2="143" y2="290" stroke="url(#glutathioneTab)" stroke-width="2.5"/>
+                <!-- 右端の目盛り線 -->
+                <g stroke="#222" stroke-width="0.9">
+                  <line x1="151" y1="174" x2="156" y2="174"/><line x1="152" y1="182" x2="156" y2="182"/>
+                  <line x1="152" y1="190" x2="156" y2="190"/><line x1="152" y1="198" x2="156" y2="198"/>
+                  <line x1="150" y1="206" x2="156" y2="206"/><line x1="152" y1="214" x2="156" y2="214"/>
+                  <line x1="152" y1="222" x2="156" y2="222"/><line x1="152" y1="230" x2="156" y2="230"/>
+                  <line x1="150" y1="238" x2="156" y2="238"/><line x1="152" y1="246" x2="156" y2="246"/>
+                  <line x1="152" y1="254" x2="156" y2="254"/><line x1="152" y1="262" x2="156" y2="262"/>
+                  <line x1="150" y1="270" x2="156" y2="270"/><line x1="152" y1="278" x2="156" y2="278"/>
+                  <line x1="151" y1="286" x2="156" y2="286"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <span class="mt-2 inline-block text-xs font-bold text-neutral-600 bg-pastel-light px-3 py-1 rounded-full border border-pastel-warm">
+            内容量：30ml（スポイトタイプ）
+          </span>
+        </div>
+
+        <!-- 特徴サマリー＆ミニCTA -->
+        <div class="md:col-span-7 flex flex-col justify-between space-y-4">
+          <div class="space-y-2.5">
+            <div class="flex items-start gap-2.5 bg-pastel-cream p-3 rounded-2xl border border-pastel-warm/70">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-pastel-gold/30 text-brand-dark font-bold text-xs flex items-center justify-center mt-0.5">01</span>
+              <div>
+                <p class="font-bold text-sm sm:text-base text-brand-dark">高濃縮グルタチオンC<sup class="text-[10px]">*1</sup> 配合</p>
+                <p class="text-xs text-neutral-600">グルタチオン × 2種のビタミンC誘導体・整肌成分で集中アプローチ</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5 bg-pastel-cream p-3 rounded-2xl border border-pastel-warm/70">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-pastel-gold/30 text-brand-dark font-bold text-xs flex items-center justify-center mt-0.5">02</span>
+              <div>
+                <p class="font-bold text-sm sm:text-base text-brand-dark">ナイアシンアミド配合でうるおい透明感<sup class="text-[10px]">*2</sup></p>
+                <p class="text-xs text-neutral-600">乾燥によるくすみを防ぎ、パッと明るいツヤ白玉肌へ</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5 bg-pastel-cream p-3 rounded-2xl border border-pastel-warm/70">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-pastel-gold/30 text-brand-dark font-bold text-xs flex items-center justify-center mt-0.5">03</span>
+              <div>
+                <p class="font-bold text-sm sm:text-base text-brand-dark">朝も夜も使いやすい「しっとりサラサラ」処方</p>
+                <p class="text-xs text-neutral-600">ベタつかずスッと角質層までなじみ、メイク前にも◎</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ファーストビュー内ミニCTAボタン -->
+          <div class="pt-1">
+            <a href="https://www.amazon.co.jp/s?k=%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BA%E3%82%A4%E3%83%B3+5%E7%95%AA+%E7%99%BD%E7%8E%89%E3%82%B0%E3%83%AB%E3%82%BF%E3%83%81%E3%82%AA%E3%83%B3C%E7%BE%8E%E5%AE%B9%E6%B6%B2"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-amazon w-full py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2.5 text-brand-dark font-black text-base sm:text-lg shadow-amazon">
+              <span class="bg-brand-dark text-white text-[11px] font-en font-extrabold px-2 py-0.5 rounded">Amazon</span>
+              <span>今すぐAmazonで詳細を見る</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ファーストビュー注釈 -->
+      <div class="mt-4 text-[11px] sm:text-xs text-neutral-600 leading-relaxed bg-white/60 rounded-xl px-4 py-2.5 border border-pastel-warm/50">
+        <p>*1 グルタチオン、アスコルビン酸、アスコルビルグルコシド(全て整肌成分)</p>
+        <p>*2 保湿効果で乾燥によるくすみを防ぐ</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== 2. 問題提起（悩み、自分事にさせる） ==================== -->
+    <section class="py-14 sm:py-20 px-4 sm:px-6 bg-white relative">
+      <div class="max-w-2xl mx-auto reveal">
+        <div class="text-center mb-8">
+          <span class="inline-block font-en font-bold text-xs tracking-widest uppercase text-amber-600 bg-pastel-light px-3 py-1 rounded-full mb-2">
+            SKIN CONCERNS
+          </span>
+          <h2 class="font-maru font-black text-2xl sm:text-3xl text-brand-dark leading-snug">
+            鏡を見るたび、<br class="sm:hidden" />こんなお悩みありませんか？
+          </h2>
+        </div>
+
+        <!-- 悩みチェックリストカード -->
+        <div class="bg-pastel-cream rounded-3xl p-6 sm:p-8 border-2 border-pastel-warm shadow-soft">
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3.5 bg-white p-4 rounded-2xl shadow-sm border border-pastel-light">
+              <span class="flex-shrink-0 w-6 h-6 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="font-bold text-sm sm:text-base text-brand-charcoal leading-relaxed">
+                年々濃くなる気がする<span class="marker-yellow">シミや、過去の紫外線ダメージ</span>が気になる
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-white p-4 rounded-2xl shadow-sm border border-pastel-light">
+              <span class="flex-shrink-0 w-6 h-6 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="font-bold text-sm sm:text-base text-brand-charcoal leading-relaxed">
+                <span class="marker-yellow">乾燥によるくすみ</span>で、肌全体が暗く疲れて見える
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-white p-4 rounded-2xl shadow-sm border border-pastel-light">
+              <span class="flex-shrink-0 w-6 h-6 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="font-bold text-sm sm:text-base text-brand-charcoal leading-relaxed">
+                ファンデーションやコンシーラーで隠す<span class="marker-yellow">厚塗りメイクから卒業したい</span>
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-white p-4 rounded-2xl shadow-sm border border-pastel-light">
+              <span class="flex-shrink-0 w-6 h-6 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="font-bold text-sm sm:text-base text-brand-charcoal leading-relaxed">
+                美容クリニックや本格的なケアは<span class="marker-yellow">高くてハードルが高い…</span>
+              </p>
+            </li>
+
+            <li class="flex items-start gap-3.5 bg-white p-4 rounded-2xl shadow-sm border border-pastel-light">
+              <span class="flex-shrink-0 w-6 h-6 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mt-0.5">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+              </span>
+              <p class="font-bold text-sm sm:text-base text-brand-charcoal leading-relaxed">
+                ビタミンC美容液は<span class="marker-yellow">ベタつきや刺激が気になり続けられない</span>
+              </p>
+            </li>
+          </ul>
+
+          <!-- 共感ブリッジメッセージ -->
+          <div class="mt-6 text-center bg-white/90 rounded-2xl p-4 border border-pastel-warm">
+            <p class="text-sm sm:text-base font-bold text-brand-dark">
+              1つでも当てはまった方へ。<br />
+              それは<span class="text-amber-600">「毎日のうるおい・整肌アプローチ」</span>が足りていないサインかもしれません。
+            </p>
+          </div>
+        </div>
+
+        <!-- 下向き矢印 -->
+        <div class="flex justify-center mt-8">
+          <div class="w-12 h-12 rounded-full bg-pastel-base flex items-center justify-center text-brand-dark shadow-sm animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. 解決（ソリューション提示） ==================== -->
+    <section class="py-14 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-pastel-light via-pastel-cream to-white border-t border-pastel-warm/60">
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="text-center mb-10">
+          <span class="inline-block font-en font-bold text-xs tracking-widest uppercase text-brand-dark bg-pastel-warm px-3.5 py-1 rounded-full mb-3">
+            SOLUTION
+          </span>
+          <h2 class="font-maru font-black text-2xl sm:text-3xl md:text-4xl text-brand-dark leading-snug mb-4">
+            その悩み、毎日のスキンケアで<br />
+            <span class="marker-yellow">『白玉グルタチオンC<sup class="text-sm">*1</sup>』</span>集中ケア！
+          </h2>
+          <p class="text-sm sm:text-base text-neutral-700 max-w-xl mx-auto leading-relaxed">
+            韓国スキンケアブランド「ナンバーズイン（numbuzin）」が辿り着いた、肌悩み番号<strong>「5番」</strong>の答え。<br class="hidden sm:inline" />
+            注目の整肌成分をギュッと凝縮し、角質層までうるおいを届けて透明感<sup class="text-[10px]">*2</sup>あふれるツヤ白玉肌へ導きます。
+          </p>
+        </div>
+
+        <!-- 成分アプローチ図解（Wアプローチ） -->
+        <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-pearl border border-pastel-warm mb-8">
+          <div class="text-center mb-6">
+            <span class="text-xs font-bold text-amber-700 bg-pastel-light px-3 py-1 rounded-full border border-pastel-warm">
+              Wの整肌成分アプローチ
+            </span>
+            <h3 class="font-maru font-black text-lg sm:text-2xl text-brand-dark mt-2">
+              高濃縮グルタチオンC<sup class="text-xs">*1</sup> × ナイアシンアミド
+            </h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 relative">
+            <!-- カード1：高濃縮グルタチオンC -->
+            <div class="bg-pastel-cream rounded-2xl p-5 border-2 border-pastel-warm relative overflow-hidden">
+              <div class="flex items-center justify-between mb-3">
+                <span class="glutathione-tag text-brand-dark font-en font-bold text-xs px-3 py-1 rounded-full shadow-xs">
+                  Glutathione + Vitamin C
+                </span>
+                <span class="text-xs font-bold text-neutral-500">整肌成分</span>
+              </div>
+              <h4 class="font-maru font-black text-lg sm:text-xl text-brand-dark mb-2">
+                高濃縮グルタチオンC<sup class="text-xs">*1</sup>
+              </h4>
+              <p class="text-xs sm:text-sm text-neutral-700 leading-relaxed mb-3">
+                話題の<strong>グルタチオン</strong>に加え、ピュアビタミンC（<strong>アスコルビン酸</strong>）とビタミンC誘導体（<strong>アスコルビルグルコシド</strong>）の3種（全て整肌成分）をバランス良く配合。
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] font-bold bg-white px-2.5 py-1 rounded-lg border border-pastel-warm text-brand-dark">グルタチオン</span>
+                <span class="text-[11px] font-bold bg-white px-2.5 py-1 rounded-lg border border-pastel-warm text-brand-dark">アスコルビン酸</span>
+                <span class="text-[11px] font-bold bg-white px-2.5 py-1 rounded-lg border border-pastel-warm text-brand-dark">アスコルビルグルコシド</span>
+              </div>
+            </div>
+
+            <!-- 中央の「×」アイコン（PC・スマホ両対応） -->
+            <div class="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-brand-dark text-pastel-base font-en font-black text-lg shadow-md absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+              ×
+            </div>
+
+            <!-- カード2：ナイアシンアミド -->
+            <div class="bg-pastel-cream rounded-2xl p-5 border-2 border-pastel-warm relative overflow-hidden">
+              <div class="flex items-center justify-between mb-3">
+                <span class="bg-pastel-warm text-brand-dark font-en font-bold text-xs px-3 py-1 rounded-full">
+                  Niacinamide
+                </span>
+                <span class="text-xs font-bold text-neutral-500">整肌成分</span>
+              </div>
+              <h4 class="font-maru font-black text-lg sm:text-xl text-brand-dark mb-2">
+                ナイアシンアミド配合
+              </h4>
+              <p class="text-xs sm:text-sm text-neutral-700 leading-relaxed mb-3">
+                肌のキメを整え、うるおいバリアをサポートする<strong>ナイアシンアミド（整肌成分）</strong>を贅沢に配合。乾燥によるくすみを防ぎ、なめらかなツヤ肌へ導きます。
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="text-[11px] font-bold bg-white px-2.5 py-1 rounded-lg border border-pastel-warm text-brand-dark">キメを整える</span>
+                <span class="text-[11px] font-bold bg-white px-2.5 py-1 rounded-lg border border-pastel-warm text-brand-dark">うるおいツヤ感</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- メカニズム結論ボックス -->
+          <div class="mt-6 bg-gradient-to-r from-pastel-light via-pastel-base to-pastel-light rounded-2xl p-5 text-center border border-pastel-gold/50">
+            <p class="font-maru font-black text-base sm:text-lg text-brand-dark">
+              角質層までしっかりアプローチして乾燥によるくすみを防ぎ、<br class="hidden sm:inline" />
+              パッと明るい<span class="underline decoration-amber-500 decoration-4 underline-offset-4">透明感<sup class="text-xs">*2</sup>のあるツヤ白玉肌</span>へ！
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. 口コミ（実際の購入者の声） ==================== -->
+    <section class="py-14 sm:py-20 px-4 sm:px-6 bg-pastel-cream border-t border-pastel-warm/60">
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="text-center mb-10">
+          <span class="inline-block font-en font-bold text-xs tracking-widest uppercase text-amber-700 bg-white px-3.5 py-1 rounded-full border border-pastel-warm mb-2">
+            CUSTOMER REVIEWS
+          </span>
+          <h2 class="font-maru font-black text-2xl sm:text-3xl text-brand-dark leading-snug">
+            Amazon購入者様から<br class="sm:hidden" />嬉しい声が続々届いています！
+          </h2>
+          <p class="text-xs sm:text-sm text-neutral-600 mt-2">
+            実際にご使用いただいたお客様のリアルなレビューをご紹介
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- 口コミ①：ひだか さん -->
+          <article class="bg-white rounded-3xl p-6 sm:p-7 shadow-soft border border-pastel-warm/80 relative">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-gray-100">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <div>
+                  <p class="font-bold text-sm text-brand-dark">ひだか <span class="font-normal text-xs text-gray-500">さん</span></p>
+                  <p class="text-[11px] text-gray-500">2026年11月2日に日本でレビュー済み</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
+                ✓ Amazonで購入
+              </span>
+            </div>
+
+            <!-- 星評価とタイトル -->
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <div class="flex items-center text-amber-500 text-base tracking-tight" aria-label="5つ星のうち5.0">
+                ★★★★★ <span class="ml-1 text-xs font-en font-bold text-brand-dark">5.0</span>
+              </div>
+              <h3 class="font-bold text-base sm:text-lg text-brand-dark">
+                シミ対策に購入しました
+              </h3>
+            </div>
+
+            <p class="text-xs text-gray-500 mb-3">
+              サイズ：5番 白玉グルタチオンC美容液 30ml
+            </p>
+
+            <!-- レビュー本文 -->
+            <div class="bg-pastel-cream/70 rounded-2xl p-4 text-sm sm:text-[15px] text-brand-charcoal leading-relaxed space-y-2 border border-pastel-light">
+              <p>美白やシミ対策にバツグン。</p>
+              <p>毎日使用してます。</p>
+              <p>多分シミが少しづつ薄くなってる…</p>
+              <p>同じ5番のトナーパッドを美容液をつけたあとシミの気になるところに貼ってしばらく置いておくと効果がもっとでます。</p>
+              <p class="font-bold text-brand-dark">仕上がりはしっとりサラサラになるので最高！</p>
+            </div>
+          </article>
+
+          <!-- 口コミ②：チッチ さん -->
+          <article class="bg-white rounded-3xl p-6 sm:p-7 shadow-soft border border-pastel-warm/80 relative">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-3 border-b border-gray-100">
+              <div class="flex items-center gap-2.5">
+                <div class="w-9 h-9 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <div>
+                  <p class="font-bold text-sm text-brand-dark">チッチ <span class="font-normal text-xs text-gray-500">さん</span></p>
+                  <p class="text-[11px] text-gray-500">2026年9月18日に日本でレビュー済み</p>
+                </div>
+              </div>
+              <span class="inline-flex items-center gap-1 text-xs font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-full">
+                ✓ Amazonで購入
+              </span>
+            </div>
+
+            <!-- 星評価とタイトル -->
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <div class="flex items-center text-amber-500 text-base tracking-tight" aria-label="5つ星のうち5.0">
+                ★★★★★ <span class="ml-1 text-xs font-en font-bold text-brand-dark">5.0</span>
+              </div>
+              <h3 class="font-bold text-base sm:text-lg text-brand-dark">
+                結果出て 自分が一番驚いてる！
+              </h3>
+            </div>
+
+            <p class="text-xs text-gray-500 mb-3">
+              サイズ：5番 白玉グルタチオンC美容液 30ml
+            </p>
+
+            <!-- レビュー本文 -->
+            <div class="bg-pastel-cream/70 rounded-2xl p-4 text-sm sm:text-[15px] text-brand-charcoal leading-relaxed space-y-2 border border-pastel-light">
+              <p>YouTubeで薬剤師の方がシミ取りはこれ！って説明していて買いました。お値段も2000円ちょっとで全く期待してなかったのですが、1瓶30ml使い終わる頃には、本当に何十年来のシミが薄くなり</p>
+              <p class="font-bold text-brand-dark">ファンデーション要らないくらいに！</p>
+              <p>秋には美容クリニックにしみ取りに行こうと思ってましたが 必要なくなりました！主人も色が白くなったと騒いでおります！もちろんリピーターになります🍀</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-4 text-right text-[11px] text-neutral-500">
+          ※個人の感想であり、効果・効能を保証するものではありません。
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 5. 強み（選ばれる3つの理由・特徴） ==================== -->
+    <section class="py-14 sm:py-20 px-4 sm:px-6 bg-white border-t border-pastel-warm/60">
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="text-center mb-10">
+          <span class="inline-block font-en font-bold text-xs tracking-widest uppercase text-brand-dark bg-pastel-base px-3.5 py-1 rounded-full mb-2">
+            3 REASONS TO CHOOSE
+          </span>
+          <h2 class="font-maru font-black text-2xl sm:text-3xl text-brand-dark leading-snug">
+            ナンバーズイン5番が<br class="sm:hidden" />選ばれる<span class="marker-yellow">3つの強み</span>
+          </h2>
+        </div>
+
+        <div class="space-y-6">
+          <!-- 強み1 -->
+          <div class="bg-pastel-cream rounded-3xl p-6 sm:p-8 border border-pastel-warm shadow-soft flex flex-col sm:flex-row gap-5 items-start">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-brand-dark text-pastel-base flex flex-col items-center justify-center font-en shadow-md">
+              <span class="text-[10px] font-bold tracking-wider">POINT</span>
+              <span class="text-xl font-extrabold leading-none">01</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-maru font-black text-lg sm:text-xl text-brand-dark mb-2 leading-snug">
+                高濃縮グルタチオンC<sup class="text-xs">*1</sup> × ナイアシンアミドの黄金バランス
+              </h3>
+              <p class="text-sm sm:text-base text-neutral-700 leading-relaxed">
+                グルタチオン・アスコルビン酸・アスコルビルグルコシド（全て整肌成分）とナイアシンアミドを贅沢配合。乾燥によるくすみを防ぎ、内側から輝くようなツヤ白玉肌へ導きます。
+              </p>
+            </div>
+          </div>
+
+          <!-- 強み2 -->
+          <div class="bg-pastel-cream rounded-3xl p-6 sm:p-8 border border-pastel-warm shadow-soft flex flex-col sm:flex-row gap-5 items-start">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-brand-dark text-pastel-base flex flex-col items-center justify-center font-en shadow-md">
+              <span class="text-[10px] font-bold tracking-wider">POINT</span>
+              <span class="text-xl font-extrabold leading-none">02</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-maru font-black text-lg sm:text-xl text-brand-dark mb-2 leading-snug">
+                「しっとりサラサラ」ベタつかない快適テクスチャー
+              </h3>
+              <p class="text-sm sm:text-base text-neutral-700 leading-relaxed">
+                朝のメイク前でも使いやすい、肌なじみの良い使用感。口コミでも<strong>「仕上がりはしっとりサラサラになるので最高！」</strong>と高評価。季節を問わず心地よくケアできます。
+              </p>
+            </div>
+          </div>
+
+          <!-- 強み3 -->
+          <div class="bg-pastel-cream rounded-3xl p-6 sm:p-8 border border-pastel-warm shadow-soft flex flex-col sm:flex-row gap-5 items-start">
+            <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-brand-dark text-pastel-base flex flex-col items-center justify-center font-en shadow-md">
+              <span class="text-[10px] font-bold tracking-wider">POINT</span>
+              <span class="text-xl font-extrabold leading-none">03</span>
+            </div>
+            <div class="flex-1">
+              <h3 class="font-maru font-black text-lg sm:text-xl text-brand-dark mb-2 leading-snug">
+                毎日続けやすい高コスパ＆ライン使いの相乗効果
+              </h3>
+              <p class="text-sm sm:text-base text-neutral-700 leading-relaxed">
+                30mlで手に取りやすい価格帯だから、惜しみなく毎日継続可能。同じ<strong>「5番のトナーパッド」</strong>との併用で、気になる部分への集中パックケアもおすすめです。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. アマゾンリンクボタン（クロージング＆CTA） ==================== -->
+    <section id="cta-section" class="py-16 sm:py-20 px-4 sm:px-6 hero-gradient border-t border-pastel-warm">
+      <div class="max-w-2xl mx-auto reveal">
+        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-pearl border-2 border-pastel-gold/60 text-center relative overflow-hidden">
+          <!-- 上部アクセントバー -->
+          <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-pastel-gold via-brand-lavender to-pastel-gold"></div>
+
+          <span class="inline-block bg-pastel-light text-brand-dark font-bold text-xs sm:text-sm px-4 py-1.5 rounded-full border border-pastel-warm mb-4">
+            毎日のスキンケアを、白玉ケアへアップデート
+          </span>
+
+          <h2 class="font-maru font-black text-xl sm:text-3xl text-brand-dark leading-snug mb-6">
+            高濃縮グルタチオンC<sup class="text-xs">*1</sup>とナイアシンアミドで、<br />
+            <span class="marker-yellow">透明感<sup class="text-xs">*2</sup>のあるツヤ白玉肌</span>へ
+          </h2>
+
+          <!-- 商品再掲カード -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-6 bg-pastel-cream rounded-2xl p-5 mb-7 border border-pastel-warm">
+            <div class="w-28 h-36 flex items-center justify-center flex-shrink-0">
+              <img
+                src="numbersin5.jpg"
+                alt="ナンバーズイン(numbuzin) 5番 白玉グルタチオンC美容液 30ml"
+                class="max-h-36 w-auto object-contain drop-shadow-md rounded-xl"
+                onerror="this.style.display='none'; document.getElementById('cta-product-svg').classList.remove('hidden');"
+              />
+              <!-- フォールバックミニSVG -->
+              <div id="cta-product-svg" class="hidden w-24 h-36">
+                <svg viewBox="0 0 220 340" class="w-full h-full drop-shadow-md" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M93 26 C93 12, 127 12, 127 26 L129 66 L91 66 Z" fill="#222"/>
+                  <rect x="81" y="64" width="58" height="36" rx="4" fill="#181818"/>
+                  <rect x="92" y="100" width="36" height="16" fill="#222"/>
+                  <path d="M92 116 C72 122, 64 136, 64 156 L64 304 C64 316, 72 322, 110 322 C148 322, 156 316, 156 304 L156 156 C156 136, 148 122, 128 116 Z" fill="#1D1816"/>
+                  <rect x="155" y="166" width="18" height="68" rx="3" fill="#A9BBE9"/>
+                  <rect x="64" y="166" width="92" height="134" fill="#FFFFFF"/>
+                  <text x="76" y="226" font-family="Plus Jakarta Sans, sans-serif" font-size="52" font-weight="700" fill="#181818">5</text>
+                  <text x="103" y="198" font-family="Plus Jakarta Sans, sans-serif" font-size="22" font-weight="700" fill="#181818">+</text>
+                  <text x="80" y="272" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="700" fill="#222222" transform="rotate(-90 80 272)">numbuz:n</text>
+                </svg>
+              </div>
+            </div>
+
+            <div class="text-center sm:text-left">
+              <p class="font-en font-bold text-xs text-neutral-500 mb-1">numbuzin No.5 Vitamin Concentrated Serum</p>
+              <p class="font-maru font-black text-lg sm:text-xl text-brand-dark mb-2">
+                ナンバーズイン(numbuzin)<br />
+                5番 白玉グルタチオンC美容液
+              </p>
+              <div class="inline-flex items-center gap-2 bg-white px-3 py-1 rounded-lg border border-pastel-warm text-xs font-bold text-neutral-700">
+                <span>内容量：30ml</span>
+                <span>｜</span>
+                <span class="text-amber-600">★★★★★ 5.0 レビュー高評価</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- メインAmazonリンクボタン -->
+          <a href="https://www.amazon.co.jp/s?k=%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BA%E3%82%A4%E3%83%B3+5%E7%95%AA+%E7%99%BD%E7%8E%89%E3%82%B0%E3%83%AB%E3%82%BF%E3%83%81%E3%82%AA%E3%83%B3C%E7%BE%8E%E5%AE%B9%E6%B6%B2"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn-amazon w-full py-4 sm:py-5 px-6 rounded-2xl flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3 text-brand-dark shadow-amazon">
+            <span class="inline-flex items-center gap-1.5 bg-brand-dark text-white text-xs font-en font-extrabold px-2.5 py-1 rounded-md">
+              <svg class="w-4 h-4 text-amazon-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M15.93 17.09c-2.37 1.75-5.81 2.68-8.77 2.68-4.15 0-7.89-1.53-10.71-4.08-.22-.2-.02-.47.24-.32 3.05 1.77 6.82 2.84 10.71 2.84 2.63 0 5.52-.54 8.18-1.67.4-.17.74.26.35.55zm.99-1.13c-.3-.39-1.99-.18-2.75-.09-.23.03-.27-.17-.06-.32 1.35-.95 3.56-.67 3.82-.36.26.32-.07 2.54-1.34 3.6-.19.16-.38.08-.29-.14.28-.71.92-2.3.62-2.69z"/></svg>
+              amazon.co.jp
+            </span>
+            <span class="font-maru font-black text-lg sm:text-xl tracking-tight">
+              Amazonで詳細・最新価格を見る
+            </span>
+            <svg class="w-6 h-6 hidden sm:block" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </a>
+
+          <p class="mt-3 text-xs text-neutral-500">
+            ※Amazon.co.jpの商品検索ページが新しいタブで開きます
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== フッター（全注釈整理） ==================== -->
+  <footer class="bg-pastel-cream border-t border-pastel-warm py-10 px-4 sm:px-6 text-neutral-600">
+    <div class="max-w-3xl mx-auto space-y-4 text-xs leading-relaxed">
+      <div class="bg-white/80 rounded-2xl p-4 sm:p-5 border border-pastel-warm/70 space-y-1.5">
+        <p class="font-bold text-brand-dark mb-1">【注釈・表記について】</p>
+        <p>*1 グルタチオン、アスコルビン酸、アスコルビルグルコシド(全て整肌成分)</p>
+        <p>*2 保湿効果で乾燥によるくすみを防ぐ</p>
+        <p>※掲載している口コミはAmazon購入者レビューに基づく個人の感想であり、使用感や効果・効能を保証するものではありません。</p>
+      </div>
+      <div class="text-center pt-2 text-neutral-500">
+        <p class="font-en font-bold text-brand-dark">numbuz:n No.5 Vitamin'3 Concentrated Serum</p>
+        <p class="mt-1">ナンバーズイン(numbuzin) 5番 白玉グルタチオンC美容液（30ml）紹介ページ</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 追従フローティングAmazonボタン ==================== -->
+  <div id="floating-cta" class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-pastel-warm shadow-[0_-4px_20px_rgba(0,0,0,0.08)] px-3 py-2.5 sm:py-3 transition-transform duration-300">
+    <div class="max-w-2xl mx-auto flex items-center gap-2 sm:gap-3">
+      <div class="hidden sm:flex flex-col flex-shrink-0">
+        <span class="text-[10px] font-bold text-amber-700">透明感*²のあるツヤ白玉肌へ</span>
+        <span class="text-xs font-black text-brand-dark">5番 白玉グルタチオンC美容液</span>
+      </div>
+
+      <a href="https://www.amazon.co.jp/s?k=%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BA%E3%82%A4%E3%83%B3+5%E7%95%AA+%E7%99%BD%E7%8E%89%E3%82%B0%E3%83%AB%E3%82%BF%E3%83%81%E3%82%AA%E3%83%B3C%E7%BE%8E%E5%AE%B9%E6%B6%B2"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn-amazon flex-1 py-2.5 sm:py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-brand-dark font-black text-sm sm:text-base shadow-sm">
+        <span class="bg-brand-dark text-white text-[10px] font-en font-extrabold px-1.5 py-0.5 rounded">Amazon</span>
+        <span>Amazonで詳細・最新価格を見る</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <!-- 閉じるボタン（邪魔にならない配慮） -->
+      <button id="close-floating-cta"
+              type="button"
+              aria-label="追従ボタンを閉じる"
+              class="flex-shrink-0 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 flex items-center justify-center transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- インタラクション用JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. スクロール時のフェードインアニメーション（IntersectionObserver）
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      revealElements.forEach((el) => revealObserver.observe(el));
+
+      // 2. フローティングCTAの閉じるボタン処理
+      const floatingCta = document.getElementById('floating-cta');
+      const closeBtn = document.getElementById('close-floating-cta');
+
+      if (closeBtn && floatingCta) {
+        closeBtn.addEventListener('click', () => {
+          floatingCta.style.transform = 'translateY(120%)';
+          setTimeout(() => {
+            floatingCta.style.display = 'none';
+          }, 300);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
